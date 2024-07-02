@@ -5,6 +5,7 @@ import { useEffect, useState, useMemo } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { ReactTyped } from "react-typed";
+import "../static/style.css";
 
 function Home() {
   const [init, setInit] = useState(false);
@@ -139,8 +140,8 @@ function Home() {
           )}
         </div>
 
-        <div className="z-50 absolute top-[40%] left-1/2 -translate-x-[50%] translate-y-[50%]">
-          <h1 className="text-[#FC5858] font-extrabold sm:text-7xl text-4xl w-full whitespace-nowrap sm:w-auto text-extrabold text-center">
+        <div className="z-30 absolute top-[35%] left-1/2 -translate-x-[50%] translate-y-[50%]">
+          <h1 className="text-[#FC5858] font-extrabold md:text-7xl text-4xl w-full whitespace-nowrap md:w-auto text-extrabold text-center">
             Kirubel <span className="text-white">Mamo</span> <br />
             <ReactTyped
               strings={[
@@ -150,16 +151,16 @@ function Home() {
               typeSpeed={50}
               backSpeed={60}
               loop
-              style={{ fontWeight: "300" }}
-              className="sm:text-[32px] text-[20px]"
+              style={{ fontWeight: "200" }}
+              className="md:text-[32px] text-[20px]"
             />
           </h1>
           <br />
         </div>
       </div>
 
-      <div className="absolute sm:pl-10 left-0 sm:top-[40%] bottom-5 w-full md:w-auto flex justify-center md:bottom-auto">
-        <div className="flex sm:flex-col gap-[20px] items-start">
+      <div className="absolute md:pl-10 left-0 md:top-[40%] bottom-5 w-full md:w-auto flex justify-center md:bottom-auto">
+        <div className="flex md:flex-col gap-[20px] items-start">
           {socialIcons.map((item) => (
             <span className="cursor-pointer" key={item.name}>
               <item.Icon size={25} color="#ECECEC" />
@@ -168,7 +169,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="absolute pr-10 sm:flex hidden right-0 top-[43%]">
+      <div className="absolute pr-10 md:flex hidden right-0 top-[43%]">
         <div className="flex flex-col gap-[20px] items-start">
           {contactIcons.map((item) => (
             <span className="cursor-pointer" key={item.name}>

@@ -1,0 +1,13 @@
+header {
+  z-index: 9999;
+  position: relative;
+}
+
+.container {
+  z-index: 9999;
+  position: relative;
+}
+
+canvas {
+  z-index: 0;
+}
