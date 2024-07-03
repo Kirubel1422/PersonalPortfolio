@@ -9,7 +9,13 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <App />
-      <Cursor hollow duration={0} color={"#ECECEC"} size={45} />
+      <Cursor
+        className="z-[100]"
+        hollow
+        duration={0}
+        color={"#ECECEC"}
+        size={45}
+      />
     </BrowserRouter>
   </React.StrictMode>
 );

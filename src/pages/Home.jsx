@@ -34,10 +34,10 @@ function Home() {
             enable: true,
             mode: "push",
           },
-          onHover: {
-            enable: true,
-            mode: "repulse",
-          },
+          // onHover: {
+          //   enable: true,
+          //   mode: "repulse",
+          // },
         },
         modes: {
           push: {
@@ -148,7 +148,7 @@ function Home() {
                 '<span style="color: white;">I am a</span> frontend developer',
                 '<span style="color: white;">I am a</span> UI/UX designer',
               ]}
-              typeSpeed={50}
+              typeSpeed={90}
               backSpeed={60}
               loop
               style={{ fontWeight: "200" }}
