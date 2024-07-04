@@ -1,26 +1,8 @@
 import { Link } from "react-router-dom";
 import PropType from "prop-types";
+import { navs } from "../constants/nav";
 
 function Navigation({ setText, setOpen }) {
-  const navs = [
-    {
-      name: "Home",
-      path: "/home",
-    },
-    {
-      name: "About",
-      path: "/about",
-    },
-    {
-      name: "Portfolio",
-      path: "/portfolio",
-    },
-    {
-      name: "Contact",
-      path: "/contact",
-    },
-  ];
-
   const show = (name) => {
     setText(name);
   };

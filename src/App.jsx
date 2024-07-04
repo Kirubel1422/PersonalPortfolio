@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 import "./static/style.css";
 import Navigation from "./components/Navigation";
 import About from "./pages/About";
+import Portfolio from "./pages/Portfolio";
+import Contact from "./pages/Contact";
 
 function App() {
   const [isSideOpen, setSideOpen] = useState(false);
@@ -16,12 +18,12 @@ function App() {
     open: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 },
+      transition: { duration: 0.75 },
     },
     closed: {
       opacity: 0,
       y: "-100%",
-      transition: { duration: 0.2 },
+      transition: { duration: 0.4 },
     },
   };
 
@@ -47,14 +49,14 @@ function App() {
     },
     closed: {
       x: "-300%",
-      transition: { duration: 0.75 },
+      transition: { duration: 1.3 },
       opacity: 1,
       y: 0,
     },
   };
 
   return (
-    <div className="bg-[#1f1f1f] py-6 px-10 overflow-x-hidden">
+    <div className="bg-[#1f1f1f] py-6 sm:px-4 md:px-10 overflow-x-hidden">
       <header
         className={` ${
           isSideOpen ? "hidden" : "flex "
@@ -107,6 +109,8 @@ function App() {
             <Route path={item} key={index} element={<Home />} />
           ))}
           <Route path={"/about"} element={<About />} />
+          <Route path={"/portfolio"} element={<Portfolio />} />
+          <Route path={"/contact"} element={<Contact />} />
         </Routes>
       </main>
     </div>
