@@ -10,7 +10,7 @@ const ProjectCards = ({ img, title, desc, projectLink, ...props }) => {
           alt={"Project Image"}
         />
 
-        <div className="lg:p-8 md:p-6 px-4 py-6 shadow-xl lg:w-[40vw] justify-center lg:absolute lg:-right-10 xl:right-40 lg:bottom-[5%] xl:bottom-[10%] rounded-[16px] bg-black">
+        <div className="lg:p-8 md:p-6 px-4 py-6 lg:shadow-lg lg:shadow-neutral-900 lg:w-[40vw] justify-center lg:absolute lg:-right-10 xl:right-40 lg:bottom-[5%] xl:bottom-[10%] rounded-[16px] bg-neutral-800">
           <h3 className="md:text-[38px] text-[32px] font-semibold text-primary">
             {title}
           </h3>
