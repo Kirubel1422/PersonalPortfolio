@@ -1,8 +1,6 @@
 import PropTypes from "prop-types";
-import { useNavigate } from "react-router-dom";
 
 const ProjectCards = ({ img, title, desc, projectLink, ...props }) => {
-  const navigate = useNavigate();
   return (
     <div className="mt-24">
       <div className="lg:relative">
@@ -21,13 +19,13 @@ const ProjectCards = ({ img, title, desc, projectLink, ...props }) => {
           </p>
 
           <div className="flex items-center justify-center mt-[20px]">
-            <button
-              onClick={() => navigate(projectLink)}
-              type="button"
+            <a
+              href={projectLink}
+              target="_blank"
               className=" border border-primary hover:bg-primary hover:text-white transition-all duration-300 ease-out text-[16px] text-opacity-80 text-primary py-[10px] px-[20px] font-semibold "
             >
               View Project
-            </button>
+            </a>
           </div>
         </div>
       </div>

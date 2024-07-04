@@ -1,57 +1,10 @@
-import { FaLaptopCode } from "react-icons/fa6";
-import { SiAltiumdesigner } from "react-icons/si";
-import { IoBriefcaseOutline } from "react-icons/io5";
 import PropTypes from "prop-types";
 import { myImg } from "../assets";
+import { details, skillSet } from "../constants/about";
 
 function About() {
-  const details = [
-    {
-      title: "Frontend Development",
-      para: "Lorem ipsum dolor sit amet consecqutore torpa",
-      Icon: FaLaptopCode,
-    },
-    {
-      title: "UI / UX Designing",
-      para: "Lorem ipsum dolor sit amet consecqutore torpa",
-      Icon: SiAltiumdesigner,
-    },
-    {
-      title: "SEO",
-      para: "Lorem ipsum dolor sit amet consecqutore torpa",
-      Icon: IoBriefcaseOutline,
-    },
-  ];
-
-  const skillSet = [
-    {
-      name: "HTML/CSS",
-      value: 95,
-    },
-    {
-      name: "Vanilla Javascript",
-      value: 97,
-    },
-    {
-      name: "React JS",
-      value: 90,
-    },
-    {
-      name: "Redux",
-      value: 98,
-    },
-    {
-      name: "Figma",
-      value: 90,
-    },
-    {
-      name: "SEO",
-      value: 85,
-    },
-  ];
-
   return (
-    <div>
+    <div className="px-3 md:px-0">
       <h1 className="text-4xl mt-4 md:mt-0 text-white font-semibold text-center mb-[15px]">
         About <span className="text-primary">Me</span>
       </h1>
@@ -73,15 +26,15 @@ function About() {
           </p>
 
           <div className="flex items-center justify-center mt-[35px]">
-            <button className=" sm:py-5 py-2 px-6 sm:px-12 sm:text-2xl text-lg sm:font-semibold bg-[#ff0049] text-white ">
+            <button className=" sm:py-5 py-2 px-6 sm:px-12 sm:text-2xl text-lg sm:font-semibold border border-primary text-primary hover:text-white hover:bg-primary transition-all duration-300 ">
               Open CV
             </button>
           </div>
         </div>
 
-        <div className="xl:h-[400px] ">
+        <div className="xl:h-[400px]">
           <img
-            className="md:w-[450px]  rounded-[16px] sm:rounded-[80px]"
+            className="md:w-[450px] bg-blend- rounded-[16px] sm:rounded-[80px]"
             src={myImg}
             loading="lazy"
           />
@@ -133,7 +86,9 @@ const Card = ({ title, Icon, para }) => {
       <h4 className="sm:text-2xl text-xl  mt-[15px] text-white font-semibold text-center">
         {title}
       </h4>
-      <p className="mt-[10px] sm:text-lg text-white text-center">{para}</p>
+      <p className="mt-[10px] text-white text-center w-[300px] sm:w-[330px]">
+        {para}
+      </p>
     </div>
   );
 };

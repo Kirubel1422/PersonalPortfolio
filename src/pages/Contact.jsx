@@ -2,6 +2,9 @@ import { useState } from "react";
 import { contactBg } from "../assets";
 import ContactCard from "../components/ContactCard";
 import { contactInfo } from "../constants/contact";
+import { toast } from "react-toastify";
+import { db } from "../configs/firebase";
+import { addDoc, collection } from "firebase/firestore";
 
 const Contact = () => {
   const [values, setValues] = useState({
@@ -9,6 +12,7 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -16,8 +20,62 @@ const Contact = () => {
     setValues({ ...values, [name]: value });
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const { email, name, message } = values;
+
+    if (!email || !name || !message) {
+      return toastError();
+    }
+
+    setLoading(true);
+
+    try {
+      await addDoc(collection(db, "messages"), values);
+      // Reset
+      setValues({
+        name: "",
+        email: "",
+        message: "",
+      });
+      toastSuccess();
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+      toastError();
+      setLoading(false);
+    }
+  };
+
+  const toastSuccess = () =>
+    toast.success("Message Sent!", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+
+  const toastError = () => {
+    toast.error("Something went wrong!", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+
+    return null;
+  };
   return (
-    <div>
+    <div className="h-screen">
       <h1 className="text-4xl mt-4 md:mt-0 text-white font-semibold text-center mb-[15px]">
         Contact <span className="text-primary">Me</span>
       </h1>
@@ -57,8 +115,10 @@ const Contact = () => {
 
             <input
               type={"submit"}
-              value={"Submit"}
-              className="py-1 self-center bg-primary text-white font-semibold px-3 text-[20px] rounded-[8px]"
+              value={"Send"}
+              onClick={handleSubmit}
+              disabled={loading}
+              className="py-2 disabled:bg-opacity-75 active:scale-95 cursor-pointer self-center bg-primary text-white font-semibold px-12 text-[20px] rounded-[8px]"
             />
           </form>
         </div>
@@ -70,21 +130,24 @@ const Contact = () => {
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundBlendMode: "darken",
+            backgroundColor: "rgba(0,0,0, 0.6)",
           }}
-          className={`py-4 rounded-[20px] md:pb-[0px] pb-10`}
+          className={`rounded-[20px]`}
         >
-          <h2 className="font-bold text-white my-8 text-2xl text-center ">
-            Contact Info
-          </h2>
-          <div className="flex flex-col items-start gap-8 px-3">
-            {contactInfo.map((contact, index) => (
-              <ContactCard
-                title={contact.title}
-                value={contact.value}
-                Icon={contact.Icon}
-                key={index}
-              />
-            ))}
+          <div className="py-4 md:pb-[0px] pb-10">
+            <h2 className="font-bold text-white my-8 text-2xl text-center ">
+              Contact Info
+            </h2>
+            <div className="flex flex-col items-start gap-8 px-3">
+              {contactInfo.map((contact, index) => (
+                <ContactCard
+                  title={contact.title}
+                  value={contact.value}
+                  Icon={contact.Icon}
+                  key={index}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -94,7 +157,7 @@ const Contact = () => {
 
 const StyleSheet = {
   input:
-    "bg-black/60 transition-all duration-[300] ease-out ring-2 ring-transparent focus:ring-neutral-600 py-4 w-full md:w-[70%] px-4 placeholder:font-semibold text-white placeholder:text-white/60 rounded-[16px]",
+    "bg-black/60 transition-all duration-[300] ease-out ring-2 ring-transparent focus:ring-neutral-600 py-4 w-full md:w-[70%] px-4 placeholder:font-semibold text-white placeholder:text-white/60 rounded-[12px]",
 };
 
 export default Contact;

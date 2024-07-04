@@ -3,6 +3,8 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import Cursor from "react-cursor-follow";
 import App from "./App.jsx";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -16,6 +18,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         color={"#ECECEC"}
         size={45}
       />
+      <ToastContainer />
     </BrowserRouter>
   </React.StrictMode>
 );
