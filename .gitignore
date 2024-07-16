@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 node_modules
-src/configs/firebase.js
+src/configs/*
