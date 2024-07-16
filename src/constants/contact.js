@@ -36,7 +36,7 @@ export const socialIcons = [
     Icon: FaInstagram,
   },
   {
-    path: "https://www.linkedin.com/in/tamiru-diriba-715048160?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    path: "https://www.linkedin.com/in/kirubel-mamo-1255722aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     name: "Linkedin",
     Icon: IoLogoLinkedin,
   },
