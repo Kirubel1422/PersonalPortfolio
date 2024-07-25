@@ -16,7 +16,7 @@
     "firebase": "^10.12.3",
     "framer-motion": "^11.2.12",
     "react": "^18.3.1",
-    "react-cursor-follow": "^2.0.0",
+    "react-animated-cursor": "^2.11.2",
     "react-dom": "^18.3.1",
     "react-icons": "^5.2.1",
     "react-image": "^4.1.0",
