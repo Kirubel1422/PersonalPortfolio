@@ -1,12 +1,17 @@
 import PropTypes from "prop-types";
+import { useImg } from "../hooks/useImg";
 
 const ProjectCards = ({ img, title, desc, projectLink, ...props }) => {
+  const Image = useImg();
   return (
     <div className="mt-24">
       <div className="lg:relative">
-        <img
-          className="lg:h-[400px] md:h-[350px] w-full sm:w-auto h-[300px] object-cover object-center"
+        <Image
+          style="lg:h-[400px] md:h-[350px] w-full sm:w-auto h-[300px] object-cover object-center"
           src={img}
+          circle={false}
+          height={400}
+          width={450}
           alt={"Project Image"}
         />
 

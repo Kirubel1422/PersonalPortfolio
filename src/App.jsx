@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
-import { Link, Route, Routes, useLocation } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import BurgerMenu from "./components/BurgerMenu";
 import Home from "./pages/Home";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./static/style.css";
 import Navigation from "./components/Navigation";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
+import "react-loading-skeleton/dist/skeleton.css";
 
 function App() {
   const [isSideOpen, setSideOpen] = useState(false);

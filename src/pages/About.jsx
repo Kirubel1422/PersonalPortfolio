@@ -1,8 +1,11 @@
 import PropTypes from "prop-types";
 import { myImg } from "../assets";
 import { details, skillSet } from "../constants/about";
+import { useImg } from "../hooks/useImg";
 
 function About() {
+  const Image = useImg();
+
   return (
     <div className="px-3 md:px-0">
       <h1 className="text-4xl mt-4 md:mt-0 text-white font-semibold text-center mb-[15px]">
@@ -37,10 +40,13 @@ function About() {
         </div>
 
         <div className="xl:h-[400px]">
-          <img
-            className="md:w-[450px] bg-blend- rounded-[16px] sm:rounded-[80px]"
+          <Image
             src={myImg}
-            loading="lazy"
+            circle={false}
+            height={400}
+            width={450}
+            style={"md:w-[450px] bg-blend- rounded-[16px] sm:rounded-[80px]"}
+            alt="Personal Portrait Image"
           />
         </div>
       </div>
