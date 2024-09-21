@@ -1,6 +1,7 @@
 import { FaLaptopCode } from "react-icons/fa6";
 import { SiAltiumdesigner } from "react-icons/si";
 import { IoBriefcaseOutline } from "react-icons/io5";
+import { FaRegFileCode } from "react-icons/fa";
 
 export const details = [
   {
@@ -9,9 +10,9 @@ export const details = [
     Icon: FaLaptopCode,
   },
   {
-    title: "UI / UX Designing",
-    para: "Expert in UI/UX design, prototyping, and user research.",
-    Icon: SiAltiumdesigner,
+    title: "Backend Development",
+    para: "Expert in backend development, API design, database architecture, and server-side performance optimization.",
+    Icon: FaRegFileCode,
   },
   {
     title: "SEO",
