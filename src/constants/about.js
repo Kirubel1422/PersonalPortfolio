@@ -54,6 +54,14 @@ export const skillSet = [
     name: "Flask",
     value: 98,
   },
+    {
+    name: "My SQL",
+    value: 89,
+  },
+  {
+    name: "MongoDB",
+    value: 93,
+  },
   {
     name: "Firebase",
     value: 80,
