@@ -117,6 +117,7 @@ function Home() {
             <ReactTyped
               strings={[
                 '<span style="color: white;">I am a</span> frontend developer',
+                '<span style="color: white;">I am a</span> backend developer',
                 '<span style="color: white;">I am a</span> UI/UX designer',
               ]}
               typeSpeed={90}
