@@ -47,17 +47,18 @@ export const skillSet = [
     value: 98,
   },
   {
+    name: "Node JS",
+    value: 95,
+  },
+  {
+    name: "Flask",
+    value: 98,
+  },
+  {
     name: "Firebase",
     value: 80,
   },
-  {
-    name: "Figma",
-    value: 90,
-  },
-  {
-    name: "SEO",
-    value: 85,
-  },
+
   {
     name: "Git / Github",
     value: 83,
