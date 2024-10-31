@@ -7,7 +7,7 @@ export const useImg = () => {
     <Img
       loader={
         <Skeleton
-          baseColor="#8B8B8B"
+          baseColor="#1e1e1e"
           highlightColor="#767676"
           circle={circle}
           height={height}
