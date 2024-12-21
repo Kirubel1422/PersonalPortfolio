@@ -30,7 +30,7 @@ function About() {
 
           <div className="flex items-center justify-center mt-[35px]">
             <a
-              href="https://docs.google.com/document/d/1TNkXsIqkthXm4Ea-9QglYz_N_tTtjdevTsQCyPw5mfY/edit?usp=drive_link"
+              href="https://drive.google.com/file/d/1IxS5y9THrh7YhhLUDazmSdVzDn0BUaLI/view?usp=drive_link"
               target="_blank"
               className=" sm:py-5 py-2 px-6 sm:px-12 sm:text-2xl text-lg sm:font-semibold border border-primary text-primary hover:text-white hover:bg-primary transition-all duration-300 "
             >
