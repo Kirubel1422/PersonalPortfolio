@@ -1,4 +1,10 @@
-import { _4happyImg, arifspaceImg, deges } from "../assets";
+import {
+  _4happyImg,
+  arifspaceImg,
+  ecocampus,
+  nowinvite,
+  workspace,
+} from "../assets";
 
 export const myPortfolioData = [
   {
@@ -14,9 +20,21 @@ export const myPortfolioData = [
     img: arifspaceImg,
   },
   {
-    title: "Happy 2025",
-    desc: "A clean, ReactJS and TailwindCSS-built website showcasing products, offering CRM features, and facilitating registration for a women's empowerment event in Washington D.C. on July 27th, 2025.",
-    projectLink: "https://happy2025.4happydays.com/",
-    img: deges,
+    title: "NowInvite",
+    desc: "Teamed up with skilled developers to build a seamless event RSVP platform.",
+    projectLink: "https://www.nowinvite.com/",
+    img: nowinvite,
+  },
+  {
+    title: "Ecocampus",
+    desc: "A university-friendly site linking academic tasks with eco-friendly activities, rewarding students with points that impact grades.",
+    projectLink: "https://ecocampus-frontend.vercel.app/",
+    img: ecocampus,
+  },
+  {
+    title: "Workspace",
+    desc: "Partnered with a backend developer to create a dynamic project management tool for Arif Studios.",
+    projectLink: "https://workspace.arifstudios.com",
+    img: workspace,
   },
 ];
