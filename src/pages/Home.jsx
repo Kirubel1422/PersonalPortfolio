@@ -116,8 +116,8 @@ function Home() {
             Kirubel <span className="text-white">Mamo</span> <br />
             <ReactTyped
               strings={[
-                '<span style="color: white;">I am a</span> frontend developer',
-                '<span style="color: white;">I am a</span> UI/UX designer',
+                '<span style="color: white;">I am a</span> full stack developer',
+                '<span style="color: white;">I am </span> AWS practioner',
               ]}
               typeSpeed={90}
               backSpeed={60}
