@@ -23,7 +23,7 @@ function About() {
             Dubai, UAE.
           </h2>
           <p className="sm:text-[28px] text-[15px] text-white mt-[35px] sm:leading-[40px]">
-            With over a year of experience as a professional frontend developer,
+            With over a year of experience as a professional web developer,
             I have acquired the skills and knowledge necessary to make your
             project a success. I enjoy every step while working.
           </p>
