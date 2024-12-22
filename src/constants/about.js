@@ -9,8 +9,8 @@ export const details = [
     Icon: FaLaptopCode,
   },
   {
-    title: "UI / UX Designing",
-    para: "Expert in UI/UX design, prototyping, and user research.",
+    title: "Backend Development",
+    para: "Expert in designing scalable and robust backend solutions for your project.",
     Icon: SiAltiumdesigner,
   },
   {
@@ -50,8 +50,20 @@ export const skillSet = [
     value: 80,
   },
   {
-    name: "Figma",
+    name: "Node JS",
     value: 90,
+  },
+  {
+    name: "MongoDB",
+    value: 92,
+  },
+  {
+    name: "MySQL",
+    value: 86,
+  },
+  {
+    name: "Figma",
+    value: 83,
   },
   {
     name: "SEO",
