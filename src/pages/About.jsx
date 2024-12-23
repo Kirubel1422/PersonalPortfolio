@@ -19,7 +19,7 @@ function About() {
         <div className="lg:w-[768px]">
           <h2 className="sm:text-4xl text-[28px] sm:leading-[56px] font-semibold text-white">
             I&apos;m creative{" "}
-            <span className="text-primary">frontend developer</span> based in
+            <span className="text-primary">full stack developer</span> based in
             Dubai, UAE.
           </h2>
           <p className="sm:text-[28px] text-[15px] text-white mt-[35px] sm:leading-[40px]">
