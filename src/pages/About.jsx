@@ -20,7 +20,7 @@ function About() {
           <h2 className="sm:text-4xl text-[28px] sm:leading-[56px] font-semibold text-white">
             I&apos;m creative{" "}
             <span className="text-primary">full stack developer</span> based in
-            Dubai, UAE.
+            RAK, UAE.
           </h2>
           <p className="sm:text-[28px] text-[15px] text-white mt-[35px] sm:leading-[40px]">
             With over a year of experience as a professional web developer,
@@ -41,7 +41,7 @@ function About() {
 
         <div className="xl:h-[400px]">
           <Image
-            src={myImg}
+            src={""}
             circle={false}
             height={400}
             width={450}
