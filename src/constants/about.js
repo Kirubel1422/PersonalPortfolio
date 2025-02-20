@@ -73,4 +73,12 @@ export const skillSet = [
     name: "Git / Github",
     value: 83,
   },
+  {
+    name: "Deployment",
+    value: 90,
+  },
+  {
+    name: "React Native",
+    value: 50,
+  },
 ];
